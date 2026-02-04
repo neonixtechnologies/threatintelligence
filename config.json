@@ -1,0 +1,11 @@
+{
+  "watchlist": ["ransomware", "credentials", "zero-day", "stealer"],
+  "alert_threshold": 0.7,
+  "sources": [
+    {
+      "name": "mock-onion-forum",
+      "type": "mock",
+      "seed": 42
+    }
+  ]
+}
