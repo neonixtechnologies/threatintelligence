@@ -6,24 +6,14 @@ A lightweight Python application for simulating dark web monitoring workflows. I
 - Configurable watchlists (keywords, priority tags, and routing).
 - Pluggable source interface with a mock onion source for safe testing.
 - SQLite-backed storage for findings and alerts.
-- Web dashboard for running collection passes and reviewing findings.
+- CLI for initializing storage, running a collection pass, and exporting results.
 
 ## Quick start
-Start the web dashboard:
 ```bash
-python -m threatintel
+python -m threatintel.cli --init-db
+python -m threatintel.cli --run-once
+python -m threatintel.cli --list-findings
 ```
-
-Then open <http://127.0.0.1:5000> in your browser to run collections and review findings.
-
-You can point at a custom config or database path:
-```bash
-python -m threatintel --config config.json --db threatintel.db --port 5000
-```
-
-### Environment variables
-- `THREATINTEL_CONFIG`: override the default config path.
-- `THREATINTEL_DB`: override the database location.
 
 ## Configuration
 Update `config.json` or pass your own file via `--config`.
