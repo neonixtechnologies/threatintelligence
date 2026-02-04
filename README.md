@@ -9,16 +9,10 @@ A lightweight Python application for simulating dark web monitoring workflows. I
 - CLI for initializing storage, running a collection pass, and exporting results.
 
 ## Quick start
-The CLI is exposed as a package entry point, so you can run the project with:
 ```bash
-python -m threatintel --init-db
-python -m threatintel --run-once
-python -m threatintel --list-findings
-```
-
-You can also point at a custom config or database path:
-```bash
-python -m threatintel --config config.json --db threatintel.db --run-once
+python -m threatintel.cli --init-db
+python -m threatintel.cli --run-once
+python -m threatintel.cli --list-findings
 ```
 
 ## Configuration
